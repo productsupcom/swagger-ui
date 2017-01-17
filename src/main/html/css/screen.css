@@ -335,14 +335,14 @@
 .swagger-section .swagger-ui-wrap .info_title {
   padding-bottom: 10px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 2em;
 }
 .swagger-section .swagger-ui-wrap .footer {
   margin-top: 20px;
 }
 .swagger-section .swagger-ui-wrap p.big,
 .swagger-section .swagger-ui-wrap div.big p {
-  font-size: 1em;
+  font-size: 1.1em;
   margin-bottom: 10px;
 }
 .swagger-section .swagger-ui-wrap form.fullwidth ol li.string input,
@@ -360,10 +360,27 @@
 .swagger-section .swagger-ui-wrap .message-fail {
   color: #cc0000;
 }
+.swagger-section .swagger-ui-wrap .info_additional {
+  padding-bottom: 10px;
+  font-size: 1em;
+}
+.swagger-section .swagger-ui-wrap .info_external_docs {
+  padding: 0 0 10px;
+}
+.swagger-section .swagger-ui-wrap .info_external_docs .header {
+  font-size: 1.3em;
+  padding: 0 0 5px;
+}
+.swagger-section .swagger-ui-wrap .info_external_docs p {
+  padding: 0 0 5px;
+}
 .swagger-section .swagger-ui-wrap .info_url {
   padding-bottom: 5px;
 }
 .swagger-section .swagger-ui-wrap .info_email {
+  padding-bottom: 5px;
+}
+.swagger-section .swagger-ui-wrap .info_name_wrapper {
   padding-bottom: 5px;
 }
 .swagger-section .swagger-ui-wrap .info_name {
@@ -371,7 +388,7 @@
 }
 .swagger-section .swagger-ui-wrap .info_description {
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 1em;
 }
 .swagger-section .swagger-ui-wrap .markdown ol li,
 .swagger-section .swagger-ui-wrap .markdown ul li {
@@ -1421,10 +1438,13 @@
   cursor: pointer;
 }
 .swagger-section #header {
-  background-color: #89bf04;
+  background-color: #ffffff;
   padding: 9px 14px 19px 14px;
-  height: 23px;
+  height: 30px;
   min-width: 775px;
+}
+.swagger-section #header svg {
+  height: 30px;
 }
 .swagger-section #input_baseUrl {
   width: 400px;
