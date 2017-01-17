@@ -2,16 +2,76 @@
   {{#if info}}
   <div class="info_title">{{{sanitize info.title}}}</div>
   <div class="info_description markdown">{{{sanitize info.description}}}</div>
+  <div class="info_additional">
   {{#if externalDocs}}
-  <p>{{{sanitize externalDocs.description}}}</p>
+  <div class="info_external_docs">
+  <div class="header">External documentation</div>
+  <p>
+  {{{sanitize externalDocs.description}}}<br/>
   <a href="{{{escape externalDocs.url}}}" target="_blank">{{{escape externalDocs.url}}}</a>
+  </p>
+  </div>
   {{/if}}
   {{#if info.termsOfServiceUrl}}<div class="info_tos"><a target="_blank" href="{{{escape info.termsOfServiceUrl}}}" data-sw-translate>Terms of service</a></div>{{/if}}
-  {{#if info.contact.name}}<div><div class='info_name' style="display: inline" data-sw-translate>Created by </div> {{{escape info.contact.name}}}</div>{{/if}}
+  {{#if info.contact.name}}<div class="info_name_wrapper"><div class='info_name' style="display: inline" data-sw-translate>Created by </div> {{{escape info.contact.name}}}</div>{{/if}}
   {{#if info.contact.url}}<div class='info_url' data-sw-translate>See more at <a href="{{{escape info.contact.url}}}">{{{escape info.contact.url}}}</a></div>{{/if}}
   {{#if info.contact.email}}<div class='info_email'><a target="_parent" href="mailto:{{{escape info.contact.email}}}?subject={{{escape info.title}}}" data-sw-translate>Contact the developer</a></div>{{/if}}
   {{#if info.license}}<div class='info_license'><a target="_blank" href='{{{escape info.license.url}}}'>{{{escape info.license.name}}}</a></div>{{/if}}
   {{/if}}
+  </div>
+</div>
+<div class="default_parameters">
+    <h3>Default API parameters</h3>
+    <p>Set your defaults here. You set up a project and site, all parameters will be autofilled with
+    the value you set here. <br/>
+    Additionally you can also specify an access_token (which you still have to retrieve first,
+    via the /authentication method).</p>
+    <table class="fullwidth parameters">
+        <thead>
+            <tr>
+                <th style="width: 100px; max-width: 100px" data-sw-translate="">Parameter</th>
+                <th style="width: 310px; max-width: 310px" data-sw-translate="">Value</th>
+                <th style="width: 200px; max-width: 200px" data-sw-translate="">Description</th>
+                <th style="width: 220px; max-width: 230px" data-sw-translate="">Data Type</th>
+            </tr>
+        </thead>
+        <tbody class="operation-params">
+            <tr>
+                <td class="code required"><label for="projectRef_autofill">projectRef</label></td>
+                <td>
+                    <input class="parameter" id="projectRef_autofill" type="text" value="">
+                </td>
+                <td>
+      	            <strong><span class="markdown"><p>Project reference, can either be a project tag or project id. </p>
+                    </span></strong>
+                </td>
+                <td><span class="model-signature">string</span></td>
+            </tr>
+            <tr>
+                <td class="code required"><label for="siteRef_autofill">siteRef</label></td>
+                <td>
+                    <input class="parameter" id="siteRef_autofill" type="text" value="">
+                </td>
+                <td>
+                  	<strong><span class="markdown"><p>Site reference, can either be a site tag or a site id.</p>
+                    </span></strong>
+                </td>
+                <td><span class="model-signature">string</span></td>
+            </tr>
+            <tr>
+                <td class="code required"><label for="access_token_autofill">access_token</label></td>
+                <td>
+                <input class="parameter" id="access_token_autofill" type="text" value=""></td>
+                <td>
+                  	<strong><span class="markdown"><p>Access token which is required for authentication.</p>
+                    </span></strong>
+                </td>
+                <td><span class="model-signature">string</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="autofill">Auto fill parameters</button>
+    <button id="clear">Clear all parameters</button>
 </div>
 <div class='container' id='resources_container'>
   <div class='authorize-wrapper'></div>

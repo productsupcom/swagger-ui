@@ -52,6 +52,21 @@ $(function() {
 		return error_free;
 	});
 
+	$(document).delegate("button#autofill", 'click', function() {
+		var projectRefVal = $('#projectRef_autofill').val();
+        var siteRefVal = $('#siteRef_autofill').val();
+        var accessTokenVal = $('#access_token_autofill').val();
+
+		$('input[name="projectRef"]').val(projectRefVal);
+        $('input[name="siteRef"]').val(siteRefVal);
+        $('input[name="access_token"]').val(accessTokenVal);
+	});
+
+	$(document).delegate("button#clear", 'click', function() {
+        $('input[name="projectRef"]').val('');
+        $('input[name="siteRef"]').val('');
+        $('input[name="access_token"]').val('');
+	});
 });
 
 function clippyCopiedCallback() {
