@@ -1,4 +1,16 @@
-# Swagger UI
+# Productsup CAPI - Swagger UI
+
+This is the modified Swagger UI version which is used for the Components API
+documentation. It contains the productsup logo at the top and some minor 
+usability modifications for ease of use with some API parameters.
+
+If you're interested in using this please take a look at my changes, but it's 
+best to start from master and implement your own.
+
+Take a look at the [deployment guide](https://github.com/productsupcom/component-api/blob/master/DEPLOY.md) 
+how this is used on the server.
+
+### Original contents below
 
 [![Build Status](https://travis-ci.org/swagger-api/swagger-ui.svg?branch=master)](https://travis-ci.org/swagger-api/swagger-ui)
 [![NPM version](https://badge.fury.io/js/swagger-ui.svg)](http://badge.fury.io/js/swagger-ui)
