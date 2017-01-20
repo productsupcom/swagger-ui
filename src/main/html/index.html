@@ -36,11 +36,12 @@
     $(function () {
 
       if (window.location.port != 80) {
-        host = window.location.host;
+          host = window.location.host;
       } else {
-        host = window.location.hostname;
+          host = window.location.hostname;
       }
-      url = "http://"+host+"/swagger.json";
+      protocol = window.location.protocol;
+      url = protocol+"//"+host+"/swagger.json";
 
       hljs.configure({
         highlightSizeThreshold: 5000
